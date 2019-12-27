@@ -12,7 +12,7 @@ pipeline {
         stage('Build') {
             steps {
                 // sh 'npm install'
-                sh 'sudo npm install --unsafe-perm=true --allow-root'
+                sh 'npm install --unsafe-perm=true --allow-root'
             }
         }
         stage('Test') {
