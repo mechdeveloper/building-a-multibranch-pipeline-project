@@ -11,13 +11,9 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'chown -R 113:117 "/.npm"'
-                sh 'npm install'
-            }
-        }
-        stage('Test') {
-            steps {
-                sh './jenkins/scripts/test.sh'
+                // sh 'chown -R 113:117 "/.npm"'
+                // sh 'npm install'
+                sh 'npm version' 
             }
         }
     }
