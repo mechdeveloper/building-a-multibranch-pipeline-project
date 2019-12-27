@@ -1,7 +1,9 @@
 pipeline {
     agent {
         docker {
-            image 'node:alpine'
+            // image 'node:alpine'
+            // image 'node:6-alpine'
+            image 'node'
             args '-p 3000:3000 -p 5000:5000' 
         }
     }
@@ -11,7 +13,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'sudo chown -R 113:117 "/.npm"'
+                // sh 'sudo chown -R 113:117 "/.npm"'
                 sh 'npm install'
             }
         }
